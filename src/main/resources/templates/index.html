@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>index</title>
+    <link th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+<a href="Create.html">Create</a>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Year</th>
+                <th>Genre</th>
+                <li th:text="${movList[1]}"></li>
+                <td th:text="${Movie.teststring}"/>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="mov :${movList}">
+                <td th:text="${mov.title}"></td>
+                <td th:text="${mov.year}"></td>
+                <td th:text="${mov.genre}"></td>
+            </tr>
+            </tbody>
+        </table>
+</body>
+</html>
